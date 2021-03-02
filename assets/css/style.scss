@@ -1,7 +1,73 @@
 @import "variables";
 
 body {
-    font-family: $font-stack;
-    font-size: 1rem;
-    line-height: 1.5;
+  font-family: $font-stack;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.content {
+  position: relative;
+}
+
+.header {
+  background-image: url("../images/image-hero-mobile.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 300px;
+  max-height: 300px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 24px;
+  top: 32px;
+}
+
+.main-content {
+  background-color: #f2f2f2;
+
+  &__inner-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .component {
+    border: 1px solid rgba(0, 0, 0, 0.0497193);
+    border-radius: 8px;
+    margin-bottom: 24px;
+    background-color: #fff;
+  }
+}
+
+.project {
+  position: absolute;
+  top: 216px;
+
+  &__logo {
+    height: 56px;
+    img {
+      position: sticky;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__title {
+    // margin-top: 52px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 0.875rem;
+  }
 }
