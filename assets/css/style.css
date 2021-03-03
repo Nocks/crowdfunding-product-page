@@ -4,10 +4,6 @@ body {
   line-height: 1.5;
 }
 
-.content {
-  position: relative;
-}
-
 .header {
   background-image: url("../images/image-hero-mobile.jpg");
   background-size: cover;
@@ -26,6 +22,8 @@ body {
 
 .main-content {
   background-color: #f2f2f2;
+  position: relative;
+  max-height: 2371px;
 }
 
 .main-content__inner-wrapper {
@@ -36,17 +34,37 @@ body {
 .main-content .component {
   border: 1px solid rgba(0, 0, 0, 0.0497193);
   border-radius: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 40px;
   margin-bottom: 24px;
   background-color: #fff;
 }
 
+.btn-primary {
+  background-color: #3cb3ab;
+  color: #fff;
+  font-weight: 700;
+  border-style: none;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #3cb3ab;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 .project {
   position: absolute;
-  top: 216px;
+  top: -52px;
+  left: 24px;
+  right: 24px;
+  height: 284px;
 }
 
 .project__logo {
-  height: 56px;
+  height: 28px;
+  margin-bottom: 24px;
 }
 
 .project__logo img {
@@ -71,5 +89,139 @@ body {
 .project__description {
   text-align: center;
   font-size: 0.875rem;
+}
+
+.project__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project__bookmark .bookmark-text {
+  display: none;
+}
+
+.summary {
+  position: absolute;
+  top: 256px;
+  left: 24px;
+  right: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+  height: 412px;
+}
+
+.summary__item {
+  text-align: center;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+.summary__item h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.summary__item h2 span {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 9px;
+  margin-bottom: 24px;
+  color: #7a7a7a;
+}
+
+.summary .divider {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80px;
+  border-bottom: 1px solid #7a7a7a;
+  opacity: 0.15;
+}
+
+.summary .progress {
+  width: 100%;
+}
+
+.summary .progress-bar {
+  background-color: #3cb3ab;
+}
+
+.about {
+  position: absolute;
+  top: 692px;
+  left: 24px;
+  right: 24px;
+  max-height: 1655px;
+  padding-top: 40px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.about h1 {
+  font-size: 18px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.about .reward-type {
+  padding: 24px;
+}
+
+.about .reward-type--first {
+  margin-top: 35px;
+}
+
+.about .reward-type h3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about .reward-type__pledge {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3cb4ac;
+}
+
+.about .reward-type .pledge-left {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.about .reward-type .pledge-left span {
+  font-size: 15px;
+  color: #7a7a7a;
+  font-weight: 400;
+}
+
+.about .reward-type.outOfStock h3,
+.about .reward-type.outOfStock p,
+.about .reward-type.outOfStock .pledge-left,
+.about .reward-type.outOfStock .btn-primary {
+  opacity: 0.4;
+}
+
+.about .reward-type.outOfStock .btn-primary {
+  background-color: #979797;
+}
+
+.pledge-modal-wrapper,
+.success-modal-wrapper {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
