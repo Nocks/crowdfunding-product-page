@@ -2,6 +2,7 @@ body {
   font-family: "Commissioner", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  position: relative;
 }
 
 .header {
@@ -49,7 +50,7 @@ body {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #3cb3ab;
+  background-color: #3cb3ab !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
 }
@@ -223,5 +224,95 @@ body {
 .pledge-modal-wrapper,
 .success-modal-wrapper {
   display: none;
+}
+
+.pledge-modal-wrapper.show {
+  display: block;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 121px 24px;
+}
+
+.pledge-modal-inner {
+  background-color: #fff;
+  color: #7a7a7a;
+  font-size: 14px;
+  line-height: 1.5;
+  z-index: 2;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  padding: 32px 24px;
+  border-radius: 8px;
+}
+
+.pledge-modal-inner .inner-col {
+  padding: 0;
+}
+
+.pledge-modal-inner header nav {
+  margin-bottom: 24px;
+}
+
+.pledge-modal-inner header h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.pledge-modal-inner header p {
+  margin-bottom: 24px;
+}
+
+.pledge-modal-inner .pledge {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 33px 24px 32px 24px;
+  margin-top: 24px;
+}
+
+.pledge-modal-inner .pledge .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin-bottom: 33px;
+}
+
+.pledge-modal-inner .pledge .form-check-input {
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  margin-right: 16px;
+  display: block;
+  position: static;
+  border-style: none !important;
+}
+
+.pledge-modal-inner .pledge .form-check-label {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.pledge-modal-inner .pledge .form-check-label .pledge-amount {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3cb3ab;
+}
+
+.pledge-modal-inner .pledge .form-check-input,
+.pledge-modal-inner .pledge .form-check-label {
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /*# sourceMappingURL=style.css.map */
