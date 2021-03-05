@@ -186,6 +186,7 @@
               <h4>Back this project</h4>
               <img
                 src="./assets/images/icon-close-modal.svg"
+                class="pledge-modal-close"
                 alt="close modal"
               />
             </nav>
@@ -196,7 +197,7 @@
           </header>
           <main>
             <!-- Pledge with no reward -->
-            <section class="pledge">
+            <section class="pledge component">
               <div class="pledge__header">
                 <div class="form-check">
                   <input
@@ -218,9 +219,32 @@
                   product updates via email.
                 </p>
               </main>
+              <!-- Selected pledge start -->
+              <footer>
+                <form>
+                  <div class="form-group">
+                    <label for="pledgeAmount">Enter your pledge</label>
+                    <div class="form-main">
+                      <input
+                        type="text"
+                        class="form-control rounded-pill"
+                        id="pledgeAmount"
+                        value="$ 10"
+                      />
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-continue rounded-pill"
+                      >
+                        Continue
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </footer>
+              <!-- Selected pledge end -->
             </section>
             <!-- Pledge Bamboo Stand -->
-            <section class="pledge">
+            <section class="pledge component">
               <div class="pledge__header">
                 <div class="form-check">
                   <input
@@ -242,29 +266,34 @@
                   helped us launch our promotional campaign, and you’ll be added
                   to a special Backer member list.
                 </p>
-                <h5>101 <span>left</span></h5>
+                <h5 class="pledge-left">101 <span>left</span></h5>
               </main>
               <!-- Selected pledge start -->
               <footer>
                 <form>
                   <div class="form-group">
                     <label for="pledgeAmount">Enter your pledge</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="pledgeAmount"
-                      value="$ 25"
-                    />
+                    <div class="form-main">
+                      <input
+                        type="text"
+                        class="form-control rounded-pill"
+                        id="pledgeAmount"
+                        value="$ 25"
+                      />
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-continue rounded-pill"
+                      >
+                        Continue
+                      </button>
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">
-                    Continue
-                  </button>
                 </form>
               </footer>
               <!-- Selected pledge end -->
             </section>
             <!-- Pledge Black Edition Stand -->
-            <section class="pledge">
+            <section class="pledge component">
               <div class="pledge__header">
                 <div class="form-check">
                   <input
@@ -286,29 +315,33 @@
                   thank you. You’ll be added to our Backer member list. Shipping
                   is included.
                 </p>
-                <h5>64 <span>left</span></h5>
+                <h5 class="pledge-left">64 <span>left</span></h5>
               </main>
               <!-- Selected pledge start -->
               <footer>
                 <form>
                   <div class="form-group">
                     <label for="pledgeAmount">Enter your pledge</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="pledgeAmount"
-                      value="$ 64"
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary mb-2">
-                    Continue
-                  </button>
+                    <div class="form-main">
+                      <input
+                        type="text"
+                        class="form-control rounded-pill"
+                        id="pledgeAmount"
+                        value="$ 75"
+                      />
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-continue rounded-pill"
+                      >
+                        Continue
+                      </button>
+                    </div>
                 </form>
               </footer>
               <!-- Selected pledge end -->
             </section>
             <!-- Pledge Black Edition Stand -->
-            <section class="pledge deactivated">
+            <section class="pledge component componentDeactivated">
               <div class="pledge__header">
                 <div class="form-check">
                   <input
@@ -333,23 +366,27 @@
                   and a personal thank you. You’ll be added to our Backer member
                   list. Shipping is included.
                 </p>
-                <h5>0 <span>left</span></h5>
+                <h5 class="pledge-left">0 <span>left</span></h5>
               </main>
               <!-- Selected pledge start -->
               <footer>
                 <form>
                   <div class="form-group">
                     <label for="pledgeAmount">Enter your pledge</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="pledgeAmount"
-                      value="$ 200"
-                    />
-                  </div>
-                  <button type="submit" class="btn btn-primary mb-2">
-                    Continue
-                  </button>
+                    <div class="form-main">
+                      <input
+                        type="text"
+                        class="form-control rounded-pill"
+                        id="pledgeAmount"
+                        value="$ 200"
+                      />
+                      <button
+                        type="submit"
+                        class="btn btn-primary btn-continue rounded-pill"
+                      >
+                        Continue
+                      </button>
+                    </div>
                 </form>
               </footer>
               <!-- Selected pledge end -->

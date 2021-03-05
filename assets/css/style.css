@@ -32,8 +32,8 @@ body {
   padding-right: 24px;
 }
 
-.main-content .component {
-  border: 1px solid rgba(0, 0, 0, 0.0497193);
+.component {
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   padding-left: 24px;
   padding-right: 24px;
@@ -51,8 +51,21 @@ body {
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: #3cb3ab !important;
+  background-color: #147b74 !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.pledge-left {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.pledge-left span {
+  font-size: 15px;
+  color: #7a7a7a;
+  font-weight: 400;
 }
 
 .project {
@@ -198,18 +211,6 @@ body {
   color: #3cb4ac;
 }
 
-.about .reward-type .pledge-left {
-  font-weight: 700;
-  font-size: 32px;
-  margin-bottom: 24px;
-}
-
-.about .reward-type .pledge-left span {
-  font-size: 15px;
-  color: #7a7a7a;
-  font-weight: 400;
-}
-
 .about .reward-type.outOfStock h3,
 .about .reward-type.outOfStock p,
 .about .reward-type.outOfStock .pledge-left,
@@ -237,7 +238,6 @@ body {
 
 .pledge-modal-inner {
   background-color: #fff;
-  color: #7a7a7a;
   font-size: 14px;
   line-height: 1.5;
   z-index: 2;
@@ -249,6 +249,10 @@ body {
 
 .pledge-modal-inner .inner-col {
   padding: 0;
+}
+
+.pledge-modal-inner .pledge-modal-close {
+  cursor: pointer;
 }
 
 .pledge-modal-inner header nav {
@@ -266,10 +270,18 @@ body {
 }
 
 .pledge-modal-inner .pledge {
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  padding: 33px 24px 32px 24px;
-  margin-top: 24px;
+  padding: 33px 0;
+}
+
+.pledge-modal-inner .pledge.componentSelected {
+  border: 1px solid #3cb3ab;
+}
+
+.pledge-modal-inner .pledge .form-check,
+.pledge-modal-inner .pledge main,
+.pledge-modal-inner .pledge footer {
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .pledge-modal-inner .pledge .form-check {
@@ -279,7 +291,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
   margin-bottom: 33px;
 }
 
@@ -307,12 +318,58 @@ body {
   color: #3cb3ab;
 }
 
-.pledge-modal-inner .pledge .form-check-input,
-.pledge-modal-inner .pledge .form-check-label {
+.pledge-modal-inner .pledge .form-check-input, .pledge-modal-inner .pledge .form-check-label {
   cursor: pointer;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.pledge-modal-inner .pledge main p {
+  color: #7a7a7a;
+  margin-bottom: 0;
+}
+
+.pledge-modal-inner .pledge main .pledge-left {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+.pledge-modal-inner .pledge footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 24px;
+  text-align: center;
+  display: none;
+}
+
+.pledge-modal-inner .pledge footer.show {
+  display: block;
+  margin-top: 24px;
+}
+
+.pledge-modal-inner .pledge footer .form-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pledge-modal-inner .pledge footer .form-main input {
+  width: 100px;
+  margin-right: 1em;
+}
+
+.pledge-modal-inner .pledge footer .form-main .btn-continue {
+  width: 115px;
+}
+
+.pledge-modal-inner .pledge .form-check .input[type="radio"]:checked {
+  background-color: #3cb4ac !important;
 }
 /*# sourceMappingURL=style.css.map */
