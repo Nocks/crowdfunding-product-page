@@ -233,7 +233,7 @@ body {
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0;
-  padding: 121px 24px;
+  padding: 121px 24px 900px 24px;
 }
 
 .pledge-modal-inner {
@@ -242,7 +242,7 @@ body {
   line-height: 1.5;
   z-index: 2;
   margin: 0;
-  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   padding: 32px 24px;
   border-radius: 8px;
 }

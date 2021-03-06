@@ -1,9 +1,13 @@
 const btnBackProject = document.querySelector("#backProject");
 const pledgeModal = document.querySelector(".pledge-modal-inner");
 
-btnBackProject.addEventListener("click", () => {
+function showPledgeModal() {
   const pledgeModalWrapper = document.querySelector(".pledge-modal-wrapper");
   pledgeModalWrapper.classList.add("show");
+}
+
+btnBackProject.addEventListener("click", () => {
+  showPledgeModal();
 });
 
 /*
@@ -13,16 +17,28 @@ btnBackProject.addEventListener("click", () => {
   and also display the footer of the component where user 
   can enter how much they want to pledge
 */
-function selectPledge() {
+
+function selectPledge(selectedPledgeId = null) {
   const pledgeComponents = pledgeModal.querySelectorAll(".pledge");
 
-  for (const pledgeComponent of pledgeComponents) {
-    if (pledgeComponent.querySelector(".form-check-input").checked) {
-      pledgeComponent.classList.add("componentSelected");
-      pledgeComponent.querySelector("footer").classList.add("show");
-    } else {
-      pledgeComponent.classList.remove("componentSelected");
-      pledgeComponent.querySelector("footer").classList.remove("show");
+  if (selectedPledgeId) {
+    for (const pledgeComponent of pledgeComponents) {
+      if (pledgeComponent.dataset.pledgeId === selectedPledgeId) {
+        pledgeComponent.querySelector(".form-check-input").checked = true;
+        pledgeComponent.classList.add("componentSelected");
+        pledgeComponent.querySelector("footer").classList.add("show");
+        break;
+      }
+    }
+  } else {
+    for (const pledgeComponent of pledgeComponents) {
+      if (pledgeComponent.querySelector(".form-check-input").checked) {
+        pledgeComponent.classList.add("componentSelected");
+        pledgeComponent.querySelector("footer").classList.add("show");
+      } else {
+        pledgeComponent.classList.remove("componentSelected");
+        pledgeComponent.querySelector("footer").classList.remove("show");
+      }
     }
   }
 }
@@ -63,5 +79,15 @@ window.addEventListener("click", (event) => {
   ) {
     document.querySelector(".pledge-modal-wrapper").classList.remove("show");
     resetPledgeModal();
+  }
+});
+
+const aboutComponent = document.querySelector(".about");
+
+aboutComponent.addEventListener("click", (event) => {
+  if (event.target.classList.contains("select-reward")) {
+    const pledgeId = event.target.dataset.pledgeId;
+    selectPledge(pledgeId);
+    showPledgeModal();
   }
 });
