@@ -13,11 +13,10 @@ btnBackProject.addEventListener("click", () => {
 /*
   The selectPledge function below goes through the pledge components 
   on the modal window, and checks for the selected one (radio button)
-  and changes the corlor of the border of the component, 
-  and also display the footer of the component where user 
-  can enter how much they want to pledge
+  or based on the selected pledge, it changes the corlor of the 
+  border of the component, and also display the footer 
+  of the component where user can enter how much they want to pledge
 */
-
 function selectPledge(selectedPledgeId = null) {
   const pledgeComponents = pledgeModal.querySelectorAll(".pledge");
 
@@ -66,6 +65,15 @@ pledgeModal.addEventListener("click", (event) => {
   if (selectedComponent.classList.contains("pledge")) {
     selectPledge();
   }
+
+  if (event.target.classList.contains("btn-continue")) {
+    event.preventDefault();
+    const successModalWrapper = document.querySelector(
+      ".success-modal-wrapper"
+    );
+    successModalWrapper.classList.add("show");
+    document.querySelector(".pledge-modal-wrapper").classList.remove("show");
+  }
 });
 
 window.addEventListener("click", (event) => {
@@ -91,3 +99,5 @@ aboutComponent.addEventListener("click", (event) => {
     showPledgeModal();
   }
 });
+
+const xxx = document.querySelector(".pledge-left").lastChild;

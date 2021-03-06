@@ -357,3 +357,57 @@ body {
     }
   }
 }
+
+.success-modal-wrapper.show {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 143px 24px 2000px 24px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .success-modal-inner {
+    display: block;
+    background-color: #fff;
+    border-radius: 8px;
+
+    .inner-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 24px 40px 24px;
+
+      header {
+        margin-bottom: 24px;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        h5 {
+          font-size: 18px;
+          font-weight: 700;
+          margin-bottom: 24px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-bottom: 0;
+          color: $color-dark-gray;
+        }
+
+        button {
+          font-size: 14px;
+          margin-top: 31.5px;
+          padding: 15px 33.5px;
+        }
+      }
+    }
+  }
+}
