@@ -88,6 +88,11 @@ window.addEventListener("click", (event) => {
     document.querySelector(".pledge-modal-wrapper").classList.remove("show");
     resetPledgeModal();
   }
+
+  if (event.target.classList.contains("btn-got-it")) {
+    document.querySelector(".success-modal-wrapper").classList.remove("show");
+    resetPledgeModal();
+  }
 });
 
 const aboutComponent = document.querySelector(".about");
@@ -99,5 +104,3 @@ aboutComponent.addEventListener("click", (event) => {
     showPledgeModal();
   }
 });
-
-const xxx = document.querySelector(".pledge-left").lastChild;

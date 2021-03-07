@@ -57,6 +57,13 @@ body {
     background-color: $color-dark-cyan !important;
     box-shadow: none !important;
   }
+
+  &:disabled,
+  &[disabled],
+  &:disabled:hover,
+  &[disabled]:hover {
+    background-color: $color-dark-gray !important;
+  }
 }
 
 .pledge-left {
@@ -341,13 +348,32 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        .input-symbol {
+          position: relative;
+        }
+
+        .input-symbol::before {
+          position: absolute;
+          top: 50%;
+          left: 1.5em;
+          transform: translateY(-50%);
+          content: "$";
+          font-size: 0.875rem;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 0.25);
+        }
+
         input {
-          width: 100px;
+          width: 6.25em;
           margin-right: 1em;
+          text-indent: 1.75em;
+          color: #000;
+          font-size: 0.875rem;
+          font-weight: 700;
         }
 
         .btn-continue {
-          width: 115px;
+          width: 7.1875em;
         }
       }
     }
@@ -365,7 +391,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 143px 24px 2000px 24px;
+  padding: 143px 40px 2000px 40px;
   background-color: rgba(0, 0, 0, 0.5);
 
   .success-modal-inner {

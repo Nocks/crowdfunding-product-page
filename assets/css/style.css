@@ -56,6 +56,10 @@ body {
           box-shadow: none !important;
 }
 
+.btn-primary:disabled, .btn-primary[disabled], .btn-primary:disabled:hover, .btn-primary[disabled]:hover {
+  background-color: #7a7a7a !important;
+}
+
 .pledge-left {
   font-weight: 700;
   font-size: 32px;
@@ -360,13 +364,33 @@ body {
           align-items: center;
 }
 
+.pledge-modal-inner .pledge footer .form-main .input-symbol {
+  position: relative;
+}
+
+.pledge-modal-inner .pledge footer .form-main .input-symbol::before {
+  position: absolute;
+  top: 50%;
+  left: 1.5em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: "$";
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.25);
+}
+
 .pledge-modal-inner .pledge footer .form-main input {
-  width: 100px;
+  width: 6.25em;
   margin-right: 1em;
+  text-indent: 1.75em;
+  color: #000;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .pledge-modal-inner .pledge footer .form-main .btn-continue {
-  width: 115px;
+  width: 7.1875em;
 }
 
 .pledge-modal-inner .pledge .form-check .input[type="radio"]:checked {
@@ -380,7 +404,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 143px 24px 2000px 24px;
+  padding: 143px 40px 2000px 40px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
