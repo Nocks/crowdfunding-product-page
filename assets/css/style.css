@@ -281,6 +281,15 @@ body {
   border: 1px solid #3cb3ab;
 }
 
+.pledge-modal-inner .pledge.componentDeactivated .form-check-label {
+  opacity: 0.4;
+}
+
+.pledge-modal-inner .pledge.componentDeactivated main .pledge-left,
+.pledge-modal-inner .pledge.componentDeactivated main p {
+  opacity: 0.4;
+}
+
 .pledge-modal-inner .pledge .form-check,
 .pledge-modal-inner .pledge main,
 .pledge-modal-inner .pledge footer {

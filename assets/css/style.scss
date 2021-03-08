@@ -275,6 +275,19 @@ body {
       border: 1px solid #3cb3ab;
     }
 
+    &.componentDeactivated {
+      .form-check-label {
+        opacity: 0.4;
+      }
+
+      main {
+        .pledge-left,
+        p {
+          opacity: 0.4;
+        }
+      }
+    }
+
     .form-check,
     main,
     footer {
